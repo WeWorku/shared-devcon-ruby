@@ -8,7 +8,7 @@ COPY ./profile.d /etc/profile.d
 RUN set -x \
     && apt update \
     && apt upgrade -y \
-    && apt install -y git vim curl sqlite3 build-essential \
+    && apt install -y git vim curl sqlite3 build-essential nodejs \
     && adduser --disabled-password appuser
 USER appuser
 RUN set -x \
