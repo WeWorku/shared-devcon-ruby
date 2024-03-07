@@ -12,5 +12,6 @@ RUN set -x \
     && adduser --disabled-password appuser
 USER appuser
 RUN set -x \
-    && gem install rails
+    && gem install rails \
+    && rails shakapacker:install
 WORKDIR /usr/src/app/
